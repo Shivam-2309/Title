@@ -1,0 +1,124 @@
+.programs {
+    width: 100%;
+    max-width: 1000px;
+    margin: 100px auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); 
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f4ff, #e6edff); 
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: auto; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.program img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    background: transparent;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+
+/* Hover Effect */
+.program:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.program:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+.caption {
+    position: absolute;
+    inset: 0;
+    background: rgba(41, 51, 194, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    text-align: center;
+}
+
+.caption img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.program:hover .caption {
+    opacity: 1;
+}
+
+.program-title {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #444;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background 0.3s ease;
+}
+
+/* Optional: Enhance hover */
+.program:hover .program-title {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000419;
+}
+
+
+/* -------- Responsive Design -------- */
+@media (max-width: 1200px) {
+    .programs {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .programs {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

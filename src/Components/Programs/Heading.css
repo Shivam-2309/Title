@@ -1,0 +1,89 @@
+.heading-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.heading-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #606696;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #606696, #000419);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Moving Underline Effect */
+.heading-underline {
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(to right, #000419, #606696);
+    margin: 10px auto 0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.heading-underline::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: #000419; /* Highlight color */
+    border-radius: 2px;
+    left: 0;
+    animation: moving-underline 2s infinite ease-in-out;
+}
+
+/* Back-and-Forth (Ping-Pong) Animation */
+@keyframes moving-underline {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* -------- Responsive Adjustments -------- */
+@media (max-width: 768px) {
+    .heading-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .heading-underline {
+        width: 80px;
+        height: 4px;
+    }
+
+    .heading-underline::before {
+        width: 40px;
+        height: 4px;
+    }
+}
+
+@media (max-width: 500px) {
+    .heading-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+    }
+
+    .heading-underline {
+        width: 60px;
+        height: 3px;
+    }
+
+    .heading-underline::before {
+        width: 30px;
+        height: 3px;
+    }
+}

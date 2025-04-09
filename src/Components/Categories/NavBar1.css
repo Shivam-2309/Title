@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #a7abce; 
+  box-shadow: 0 4px 0px #606696;
+  /* border-radius: 12px; */
+  max-width: 100%;
+  /* margin-left: 2.5%; */
+  /* margin-right: 2.5%; */
+  /* margin-top: 1.6%; */
+}
+
+.navbar-logo .logo {
+  height: 50px; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo .logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto; 
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000419;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #cac9dc; /* Changed hover color to match your theme */
+  background: rgba(57, 101, 163, 0.2); /* Slight highlight effect */
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem;
+  }
+
+  .navbar-links {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.8rem;
+  }
+
+  .navbar-search {
+      margin-left: 0;
+  }
+}

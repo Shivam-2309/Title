@@ -1,0 +1,116 @@
+/* General Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Dark Navbar when scrolled */
+.dark-nav {
+    background: #606696;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Links */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 1%;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a,
+ul li .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    /* Keep navbar layout row-based but adjust spacing */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .navbar-search {
+        margin-left: 0;
+    }
+
+    /* Adjust navigation menu for smaller screens */
+    ul {
+        gap: 15px;
+    }
+
+    ul li a {
+        font-size: 14px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+}

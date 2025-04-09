@@ -1,0 +1,124 @@
+/* Container for the entire category section */
+.cat4-container {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #dbdbdb, #9895e9); /* Blueish linear gradient */
+    background-size: 200% 200%; /* Required for animation */
+    animation: gradientAnimation 10s ease infinite; /* Smooth animation */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure it stays above the background */
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Optional: Add a subtle pattern or texture */
+  .cat4-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTAgMGgxMHYxMEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDBoMXYxMEgweiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4='); /* Subtle white pattern */
+    opacity: 0.2; /* Adjust opacity for subtlety */
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    z-index: 0; /* Ensure it stays behind the content */
+  }
+  
+  /* Heading for the category */
+  .category-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 2; /* Ensure it stays above the background */
+  }
+  
+  /* Swiper Container */
+  .swiper-wrapper-container {
+    display: flex;
+    justify-content: center; /* Centers the Swiper horizontally */
+    align-items: center; /* Centers the Swiper vertically */
+    width: 100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 2; /* Ensure it stays above the background */
+  }
+  
+  /* Swiper Slide */
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* Centers the content inside the slide */
+    align-items: center;
+    width: 100%;
+    padding-left: 43%;
+    margin-bottom: 8%;
+  }
+  
+  /* Product Card Container */
+  .product-card {
+    width: 500px; /* Fixed width for the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  /* Image Container */
+  .image-container {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Product Image */
+  .product-image {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    max-height: 100%; /* Ensures the image doesn't overflow */
+    object-fit: contain; /* Ensures the image is centered without cropping */
+  }
+  
+  /* Product Details */
+  .product-details {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .product-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
