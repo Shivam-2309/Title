@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../assets/Logo_Title1-Photoroom.png';
-import menuIcon from '../../assets/menu-icon.png'; // Add this icon
+import menuIcon from '../../assets/menu-icon.png'; 
 import './NavBar1.css'; 
 
 const NavBar1 = () => {
