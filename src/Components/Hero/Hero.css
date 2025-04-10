@@ -1,5 +1,5 @@
 .hero {
-    width: 98.7vw;
+    width: 100vw;
     min-height: 100vh;
     background: linear-gradient(rgba(8, 0, 58, 0.4), rgba(8, 0, 58, 0.6)), url('../../assets/bg-picture-home.jpg');
     background-size: cover;
@@ -50,6 +50,32 @@
     transform: scale(1.05);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15); 
 }
+
+.hero-logo {
+    margin: 0 auto 30px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+    animation: glow-only 3s ease-in-out infinite;
+    transition: filter 0.3s ease-in-out;
+}
+
+.hero-logo:hover {
+    filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.9));
+}
+
+@keyframes glow-only {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 24px rgba(255, 255, 255, 1));
+    }
+    100% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+}
+
+
 
 /* ---------- media query --------- */
 
