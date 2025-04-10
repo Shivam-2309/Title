@@ -52,6 +52,11 @@
     margin-top: 4px;
   }
   
+  /* .contact-list li span {
+    display: inline-block;
+    line-height: 1.5;
+  } */
+  
   .contact form input,
   .contact form textarea {
     display: block;
