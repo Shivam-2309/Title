@@ -33,12 +33,6 @@ const Programs = () => {
   return (
     <>
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Heading title="What We Offer" />
       <div className="programs">
       {programsData.map((program, index) => (
