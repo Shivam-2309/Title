@@ -87,6 +87,7 @@ ul li .nav-link:hover {
     height: 35px;
     position: relative;
     z-index: 1100;
+    margin-right:2%;
 }
 
 /* Responsive Design */

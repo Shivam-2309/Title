@@ -1,5 +1,5 @@
 .hero {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(8, 0, 58, 0.4), rgba(8, 0, 58, 0.6)), url('../../assets/bg-picture-home.jpg');
     background-size: cover;
@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
 }
 
 .hero-text {
