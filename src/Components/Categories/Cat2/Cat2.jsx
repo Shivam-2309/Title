@@ -4,6 +4,7 @@ import NavBar1 from '../NavBar1';
 import Heading from './Heading.jsx';
 import './Cat2.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ProductGrid from '../../ProductGrid.jsx';
 
 // Swiper styles
 import 'swiper/css';
@@ -41,12 +42,9 @@ const Cat2 = () => {
     <div className="cat2-container">
       <NavBar1 />
       <br />
-      <br />
-      <br />
-      <br />
       <Heading title="Showers" />
       <br />
-
+      <ProductGrid items={productsData} />
       <div className="swiper-wrapper-container">
         <Swiper
           effect={'coverflow'}

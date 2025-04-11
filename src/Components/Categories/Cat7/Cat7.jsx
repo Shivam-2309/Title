@@ -4,6 +4,7 @@ import NavBar1 from '../NavBar1';
 import Heading from './Heading.jsx';
 import './Cat7.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ProductGrid from '../../ProductGrid.jsx';
 
 // Swiper styles
 import 'swiper/css';
@@ -31,11 +32,9 @@ const Cat7 = () => {
     <div className="cat7-container">
       <NavBar1 />
       <br />
-      <br />
-      <br />
-      <br />
       <Heading title="MS , GI and other fittings" />
       <br />
+      <ProductGrid items={productsData} />
 
       <div className="swiper-wrapper-container">
         <Swiper

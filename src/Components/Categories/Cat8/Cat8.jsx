@@ -4,6 +4,7 @@ import NavBar1 from '../NavBar1';
 import Heading from './Heading.jsx';
 import './Cat8.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ProductGrid from '../../ProductGrid.jsx';
 
 // Swiper styles
 import 'swiper/css';
@@ -39,11 +40,9 @@ const Cat8 = () => {
     <div className="cat8-container">
       <NavBar1 />
       <br />
-      <br />
-      <br />
-      <br />
       <Heading title="CP Bathroom Fittings" />
       <br />
+      <ProductGrid items={productsData} />
 
       <div className="swiper-wrapper-container">
         <Swiper
