@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin: 5%;
   }
   
   .product-image {
@@ -59,21 +60,10 @@
   }
   
   /* Responsive tweaks */
-  @media (max-width: 1024px) {
-    .product-grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     .product-grid-container {
       grid-template-columns: repeat(1, 1fr);
     }
   }
-  
-  @media (max-width: 480px) {
-    .product-grid-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+
   
