@@ -32,7 +32,6 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin: 5%;
   }
   
   .product-image {
@@ -65,5 +64,6 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  
 
   
